@@ -1,0 +1,46 @@
+<h1>Tutor</h1>
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="formUser" (ngSubmit)="procesar()">
+            <label for="" class="form-label" [formGroup]="formUser" (ngSubmit)="procesar()">
+                Nombre
+            </label>
+            <input type="text" formControlName="name" class="form-control" placeholder="Ingrese el nombre">
+            <div class="alert alert-danger" [hidden]="name.valid ||name.pristine">
+              Nombre obligatorio
+            </div>
+            <label for="" class="form-label" [formGroup]="formUser" (ngSubmit)="procesar()">
+                Primer apellido
+            </label>
+            <input type="text" formControlName="firtlastname" class="form-control" placeholder="Ingrese el apellido">
+            <div class="alert alert-danger" [hidden]="firtlastname.valid ||firtlastname.pristine">
+              Apellido obligatorio
+            </div>
+            <label for="" class="form-label" [formGroup]="formUser" (ngSubmit)="procesar()">
+                Segundo apellido
+            </label>
+            <input type="text" formControlName="seconlastname" class="form-control" placeholder="Ingrese el apellido">
+            <div class="alert alert-danger" [hidden]="seconlastname.valid ||seconlastname.pristine">
+              Apellido obligatorio
+            </div>
+            <div>
+                <div class="btn-group" bnt-log>
+                  <select formControlName="typeid">
+                   <option value="cc">Cedula de Ciudadania</option>
+                   <option value="pa">Pasaporte</option>
+                   <option value="ce">Cedula de Extranjeria</option>
+                  </select>
+                  <input type="text" formControlName="idnumber" class="form-control" placeholder="Ingrese su  Cedula">
+                </div>
+          </div>
+             <div class="alert alert-danger" [hidden]="idnumber.valid ||idnumber.pristine">
+               la cedula es obligatoria
+             </div>
+           
+
+            <button class="btn btn-primary" [disabled]="formUser.invalid" classList="mb-2">
+                Enviar
+              </button>
+        </form>
+    </div>
+</div>

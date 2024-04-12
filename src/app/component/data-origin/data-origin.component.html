@@ -1,0 +1,163 @@
+<h1>Origen de Datos</h1>
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="formUser" (ngSubmit)="procesar()">
+      <div class="mb-2">
+       
+        <label class="form-label">
+          Fecha de nacimiento
+        </label>
+        <input type="date" formControlName="birthdate" class="form-control" placeholder="Fecha de nacimiento">
+
+        <div class="alert alert-danger" [hidden]="birthdate.valid ||birthdate.pristine">
+          Fecha obligatoria
+        </div>
+
+
+        <label class="form-label">
+          Nombre
+        </label>
+        <input type="text" formControlName="name" class="form-control" placeholder="Ingrese su nombre">
+
+        <div class="alert alert-danger" [hidden]="name.valid ||name.pristine">
+          El nombre es obligatorio
+        </div>
+
+        <label class="form-label">
+         Primer  Apellido
+        </label>
+        <input type="text" formControlName="firtlastname" class="form-control" placeholder="Ingrese su apellido">
+        <div class="alert alert-danger" [hidden]="firtlastname.valid ||firtlastname.pristine">
+          El apellido es obligatorio
+        </div>
+        <label class="form-label">
+          Segundo Apellido
+        </label>
+        <input type="text" formControlName="seconlastname" class="form-control" placeholder="Ingrese su apellido">
+        <div class="alert alert-danger" [hidden]="seconlastname.valid ||seconlastname.pristine">
+          El apellido es obligatorio
+        </div>
+
+        <label class="form-label">
+          Cedula
+        </label> 
+  <!-- Example single danger button -->
+    <div>
+           <div class="btn-group" bnt-log>
+             <select formControlName="typeid">
+              <option  value="CC">Cedula de Ciudadania</option>
+              <option value="pa">Pasaporte</option>
+              <option value="ce">Cedula de Extranjeria</option>
+              <option value="ti">Tarjeta de identidad</option>
+              <option value="rc">Registro civil de nacimiento</option>
+             </select>
+             <input type="text" formControlName="idnumber" class="form-control" placeholder="Ingrese su  Cedula">
+           </div>
+     </div>
+        <div class="alert alert-danger" [hidden]="idnumber.valid ||idnumber.pristine">
+          la cedula es obligatoria
+        </div>
+
+        <label class="form-label">
+          Codigo de examen
+        </label>
+        <input type="number" formControlName="idexame" class="form-control" placeholder="Ingrese Codigo del examen">
+        <div class="alert alert-danger" [hidden]="idexame.valid ||idexame.pristine">
+          Codigo de examen
+        </div>
+        <label class="form-label">
+          Numero de orden
+        </label>
+        <input type="number" formControlName="ordenumber" class="form-control" placeholder="Numero de orden">
+        <div class="alert alert-danger" [hidden]="ordenumber.valid ||ordenumber.pristine">
+          Codigo de examen
+        </div>
+
+        <label class="form-label">
+          Codigo del profesional
+        </label>
+        <input type="number" formControlName="idprofessional" class="form-control"  placeholder="Ingrese codigo del profesional acargo">
+        <div class="alert alert-danger" [hidden]="idprofessional.valid ||idprofessional.pristine">
+          Codigo de profesional
+        </div>
+        <label class="form-label">
+          Prefijo de orden
+        </label>
+        <input type="number" formControlName="ordeprefix" class="form-control"placeholder="Prefijo de orden">
+        <div class="alert alert-danger" [hidden]="ordeprefix.valid ||ordeprefix.pristine">
+          Prefijo de orden
+        </div>
+
+        <label class="form-label">
+          Codigo de la  empresa
+        </label>
+        <input type="number" formControlName="factorycode" class="form-control"placeholder="Ingrese codigo de la empresa">
+        <div class="alert alert-danger" [hidden]="factorycode.valid ||factorycode.pristine">
+          Codigo de la empresa
+        </div>
+         
+        <label class="form-label">
+          Estado
+        </label>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" formControlName="flexRadioDefaulttwo" value="Activo" checked>
+          <label class="form-check-label" for="flexRadioDefaulttwo">
+           Activo
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" formControlName="flexRadioDefaulttwo" value="Inactivo">
+          <label class="form-check-label" for="flexRadioDefaulttwo">
+            Inactivo
+          </label>
+        </div>
+      </div>
+      <label class="form-label">
+        Consecutivo de referencia
+      </label>
+      <input type="text" formControlName="consecutivereference" class="form-control" placeholder="consecutivo de referencia">
+
+      <div class="alert alert-danger" [hidden]="consecutivereference.valid ||consecutivereference.pristine">
+        Fecha obligatoria
+      </div>
+
+
+        <label class="form-label">
+          Fecha de remision
+        </label>
+        <input type="date" formControlName="submissiondate" class="form-control" placeholder="Fecha de remision">
+
+        <div class="alert alert-danger" [hidden]="submissiondate.valid ||submissiondate.pristine">
+          Fecha obligatoria
+        </div>
+
+
+        <label class="form-label">
+          Autorizacion
+        </label>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" formControlName="flexRadioDefault" value="Autoriza" checked>
+          <label class="form-check-label" for="flexRadioDefault">
+            Si autoriza
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" formControlName="flexRadioDefault" value="NoAutoriza">
+          <label class="form-check-label" for="flexRadioDefault">
+            No autoriza
+          </label>
+        </div>
+      
+
+
+
+      <button class="btn btn-primary" [disabled]="formUser.invalid">
+        Enviar
+      </button>
+
+    </form>
+  </div>
+
+</div>

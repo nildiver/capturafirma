@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.main-container{
+    background-color: rgb(230, 220, 245);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+canvas{
+    background-color: #fff;
+    border: 1px solid blue;
+}

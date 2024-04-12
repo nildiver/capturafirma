@@ -1,0 +1,85 @@
+<h1>Examenes</h1>
+<div class="card">
+    <div class="card-body">
+        <form  [formGroup]="formUser" (ngSubmit)="procesar()">
+            <div class="mb-2">
+
+                <label for="" class="form-label">
+                    Fecha de examen
+                </label>
+
+                <input type="date" formControlName="datexam" class="form-control" placeholder="Ingrese la fecha del examen">
+
+                <div class="alert alert-danger" [hidden]="datexam.valid ||datexam.pristine">
+                 Fecha del examen obligatoria
+                </div>
+            </div>
+            <label for="" class="form-label">
+                Nombre del examen
+            </label>
+
+            <input type="text" formControlName="namexam" class="form-control" placeholder="Nombre del examen">
+
+            <div class="alert alert-danger" [hidden]="namexam.valid ||namexam.pristine">
+              Nombre del examen
+            </div>
+
+            <label for="" class="form-label">
+                Tipo de referencia
+            </label>
+
+            <input type="text" formControlName="typereference" class="form-control" placeholder="Tipo de referencia">
+
+            <div class="alert alert-danger" [hidden]="typereference.valid ||typereference.pristine">
+              Tipo de referencia
+            </div>
+
+            
+
+            <label for="" class="form-label">
+                Codigo de referencia
+             </label>
+ 
+             <input type="number"  formControlName="idexam" class="form-control" placeholder="codigo de referencia">
+ 
+             <div class="alert alert-danger" [hidden]="idexam.valid ||idexam.pristine">
+               Codigo de referencia
+             </div>
+
+             <label class="form-label">
+                Estado
+              </label>
+      
+              <div class="form-check">
+                <input class="form-check-input" type="radio" formControlName="flexRadioDefaulttwo" value="Activo" checked>
+                <label class="form-check-label" for="flexRadioDefaulttwo">
+                 Activo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" formControlName="flexRadioDefaulttwo" value="Inactivo">
+                <label class="form-check-label" for="flexRadioDefaulttwo">
+                  Inactivo
+                </label>
+              </div>
+
+              <label for="" class="form-label">
+                Decripcion
+             </label>
+ 
+             <textarea type="text"  formControlName="descriptionexam" class="form-control" placeholder="Descripcion de el examen"></textarea>
+ 
+             <div class="alert alert-danger" [hidden]="descriptionexam.valid ||descriptionexam.pristine">
+               Description exam
+             </div>
+            
+
+       
+          
+          <button class="btn btn-primary" [disabled]="formUser.invalid" classList="mb-2">
+              Enviar
+            </button>
+      
+        </form>
+    </div>
+</div>
