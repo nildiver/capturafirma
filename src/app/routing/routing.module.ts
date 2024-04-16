@@ -8,6 +8,7 @@ import { IdsComponent } from '../component/ids/ids.component';
 import { TemplateComponent } from '../component/template/template.component';
 import { TutorComponent } from '../component/tutor/tutor.component';
 import { FilterComponent } from '../component/filter/filter.component';
+import { DocumentlistComponent } from '../component/documentlist/documentlist.component';
 
 const routes:Routes=[
   { 
@@ -46,6 +47,10 @@ const routes:Routes=[
   {
     path:'filter',
     component:FilterComponent
+  },
+  {
+    path:'ducumentlist',
+    component:DocumentlistComponent
   }
   
 ];

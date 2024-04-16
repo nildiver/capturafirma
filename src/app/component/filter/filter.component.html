@@ -5,22 +5,12 @@
       <option value="sexo">Genero</option>
       <option value="name">Nombre</option>
       <option value="priape">Primer  Apellido</option>
-      <option value="ocupacion">Ocupacion</option>
+     
     </select>
     <input [(ngModel)]="searchtext" name="searchtext" class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success" type="button" (click)="search()">Search</button>
   </form>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Primer Apellido</th>
-        <th scope="col">Segundo Apellido</th>
-        <th scope="col">Ocupacion</th>
-        <th scope="col">Sexo</th>
-      </tr>
-    </thead>
+  
     <tbody>
       <tr *ngFor="let item of Profesionalsalud; let i = index">
         <th scope="row">{{item.conpro}}</th>

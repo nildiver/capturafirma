@@ -14,6 +14,7 @@ import { TutorComponent } from './component/tutor/tutor.component';
 import { FilterComponent } from './component/filter/filter.component';
 import { ProfessionalService } from './professional.service';
 import { DataService } from './data.service';
+import { DocumentlistComponent } from './component/documentlist/documentlist.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DataService } from './data.service';
     ExamTemplateComponent,
     TemplateComponent,
     TutorComponent,
-    FilterComponent
+    FilterComponent,
+    DocumentlistComponent
 
   ],
   imports: [

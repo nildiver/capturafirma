@@ -4,6 +4,8 @@ export interface persona{
     seconlastname:string;
     idnumber:number;
     idexame:number;
+    descritionexam:string;
+    sexo:string;
     
     
 }  

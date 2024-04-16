@@ -1,0 +1,25 @@
+<form class="d-flex">
+    <select [(ngModel)]="searchkey" name="searchkey">
+      <option value="sexo">Genero</option>
+      <option value="name">Nombre</option>
+      <option value="firtlastname">Primer  Apellido</option>
+      <option value="seconlastname">Segundo apellido</option>
+      <option value="idnumber">Numero id</option>
+    </select>
+    <input [(ngModel)]="searchtext" name="searchtext" class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="button" (click)="search()">Search</button>
+  </form>
+  
+    <article class="all-browsers" *ngFor="let item of Documenuser; let i = index">
+        <h1>Datos personale del paciente</h1>
+        <article class="browser">
+          <h5>{{item.idnumber}}</h5>
+          <p>El Nombre del paciente es: {{item.nombre}}  </p>
+          <p>el primer apellido es: {{item.firtlastname}} </p>
+          <p>segundo apellido: {{item.seconlastname}}</p>
+          <p>sexo: {{item.sexo}}</p>
+          <p>Description de sus es samenes es: {{item.descritionexam}}</p>
+           
+        </article>
+
+
