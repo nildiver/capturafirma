@@ -4,14 +4,15 @@ export interface ProfessionalDTO {
     firtlastname:string;
     seconlastname:string;
     idnumber:number;
-    idprofessional:number;
+    idprofessional?:number;
     idexame:number;
-    flexRadioDefault:boolean;
-    flexRadioDefaulttwo:boolean;
+    flexRadioDefaul?:boolean;
+    flexRadioDefaulttwo?:boolean;
     ordeprefix:number;
     factorycode:number;
     ordenumber:number;
-    consecutivereference:number;
-    submissiondate:number;
+    consecutivereference?:number;
+    submissiondate?:number;
+    sexo:string;
 }
 

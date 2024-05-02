@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { DataOriginComponent } from './component/data-origin/data-origin.component';
 import { ProfessionalComponent } from './component/professional/professional.component';
@@ -15,7 +15,8 @@ import { FilterComponent } from './component/filter/filter.component';
 import { ProfessionalService } from './professional.service';
 import { DataService } from './data.service';
 import { DocumentlistComponent } from './component/documentlist/documentlist.component';
-
+import { AnimationComponent } from './component/animation/animation.component';
+//import { MatButtonModule}from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,14 +28,17 @@ import { DocumentlistComponent } from './component/documentlist/documentlist.com
     TemplateComponent,
     TutorComponent,
     FilterComponent,
-    DocumentlistComponent
+    DocumentlistComponent,
+    AnimationComponent
 
   ],
   imports: [
-    BrowserModule, 
+    BrowserModule,
+    BrowserAnimationsModule, 
     FormsModule,
     ReactiveFormsModule,
-    RoutingModule
+    RoutingModule,
+   
   ],
   providers: [ProfessionalService,DataService],
   bootstrap: [AppComponent]

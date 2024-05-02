@@ -10,14 +10,26 @@
     <input [(ngModel)]="searchtext" name="searchtext" class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success" type="button" (click)="search()">Search</button>
   </form>
-  
+  <table class="table-primary">...
+    <thead>
+      <tr>
+        <th scope="col" >#</th>
+        <th scope="col">nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Segundo apellido</th>
+        <th scope="col">sexo</th>
+      </tr>
+    </thead>
     <tbody>
       <tr *ngFor="let item of Profesionalsalud; let i = index">
         <th scope="row">{{item.conpro}}</th>
-        <td>{{item.nombre}}</td>
-        <td>{{item.priape}}</td>
-        <td>{{item.segape}}</td>
-        <td>{{item.ocupacion}}</td>
-        <td>{{item.sexo}}</td>
+        <td scope="row">{{item.nombre}}</td>
+        <td scope="row">{{item.priape}}</td>
+        <td scope="row">{{item.segape}}</td>
+        <td scope="row">{{item.ocupacion}}</td>
+        <td scope="row">{{item.sexo}}</td>
       </tr>
+      <tr>
+     
     </tbody>
+  </table>

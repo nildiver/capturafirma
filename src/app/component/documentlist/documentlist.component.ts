@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
-import { persona } from 'src/app/interfaces/persona';
 import { DocumentlistService } from 'src/app/documentlist.service';
+import { persona } from 'src/app/interfaces/persona';
 
 @Component({
   selector: 'app-documentlist',

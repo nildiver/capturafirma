@@ -1,11 +1,17 @@
 export interface persona{
-    nombre:string;
+    name:string;
     firtlastname:string;
     seconlastname:string;
+    idprofessional?:number;
     idnumber:number;
     idexame:number;
-    descritionexam:string;
+    ordeprefix?:number;
+    factorycode?:number;
+    ordenumber?:number;
     sexo:string;
+    occupation:string;
+    typeexam:string;
+    examcode:Number;
     
     
 }  

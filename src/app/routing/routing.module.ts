@@ -9,6 +9,7 @@ import { TemplateComponent } from '../component/template/template.component';
 import { TutorComponent } from '../component/tutor/tutor.component';
 import { FilterComponent } from '../component/filter/filter.component';
 import { DocumentlistComponent } from '../component/documentlist/documentlist.component';
+import { AnimationComponent } from '../component/animation/animation.component';
 
 const routes:Routes=[
   { 
@@ -51,6 +52,10 @@ const routes:Routes=[
   {
     path:'ducumentlist',
     component:DocumentlistComponent
+  },
+  {
+    path:'animation',
+    component:AnimationComponent
   }
   
 ];
